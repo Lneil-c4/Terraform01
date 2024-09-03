@@ -60,3 +60,11 @@ variable "tags" {
   description = "Tags of Azure Resources"
   type        = map(string)
 }
+
+variable "nsg_rules" {
+  description = "NSG rules"
+  type = object({
+    rule1 = map(string)
+    rule2 = map(string)
+  })
+}

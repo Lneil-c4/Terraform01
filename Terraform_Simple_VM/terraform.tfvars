@@ -10,7 +10,7 @@ vm_size    = "Standard_DS1_v2"
 vmusername = "testuser"
 vmpassword = "P@ssw0rd21_"
 
-nic_ids = { 
+nic_ids = {
   "eusvm001" = "subneta",
   "eusvm002" = "subneta",
   //"eusvm003" = "subnetc"
@@ -21,3 +21,28 @@ os_disk_size = "130"
 tags = {
   "Task" = "Terraform-IaC"
 }
+
+nsg_rules = {
+  rule1 = {
+    priority                   = 100
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_range     = "3389"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  },
+  rule2 = {
+    priority                   = 200
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_range     = "443"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  }
+}
+
+
