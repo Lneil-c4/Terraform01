@@ -1,0 +1,38 @@
+terraform init
+
+terraform fmt
+
+terraform plan -out <.tfplan>
+
+terraform apply <.tfplan>
+
+   37  git status
+   38  git add .
+   39  git branch
+   40  git checkout -b terraform
+   41  git branch
+   42  git status
+   43  git commit -m "Commit the initial file for terraform vm with module"
+   44  git branch
+   45  git status
+   46  git branch main
+   47  git branch
+   48  git checkout main
+   49  git status
+   50  git merge terraform
+   51  git log
+   52  git config --global user.email "neilevanlorca@gmail.com"
+   53  git config --global user.name "neil"
+   54  git remote add origin https://github.com/neillorca/Terraform01.git
+   55  git branch
+   56  git push origin terraform
+   57  git push origin terraform:main
+   58  git push origin main
+   59  git push -f origin terraform:main
+
+
+
+
+
+
+
